@@ -1,0 +1,115 @@
+
+(C:\Program Files\Anaconda3) C:\Users\USER>conda create -n tensorflow
+Fetching package metadata .........
+.Solving package specifications: .
+Package plan for installation in environment C:\Program Files\Anaconda3\envs\ten
+sorflow:
+
+The following empty environments will be CREATED:
+
+C:\Program Files\Anaconda3\envs\tensorflow
+
+Proceed ([y]/n)? y
+
+#
+# To activate this environment, use:
+# > activate tensorflow
+#
+# To deactivate this environment, use:
+# > deactivate tensorflow
+#
+# * for power-users using bash, you must source
+#
+
+
+(C:\Program Files\Anaconda3) C:\Users\USER>activate tensorflow
+
+(tensorflow) C:\Users\USER>pip install --ignore-installed --upgrade https://stor
+age.googleapis.com/tensorflow/windows/cpu/tensorflow-1.0.1-cp35-cp35m-win_amd64.
+whl
+Collecting tensorflow==1.0.1 from https://storage.googleapis.com/tensorflow/wind
+ows/cpu/tensorflow-1.0.1-cp35-cp35m-win_amd64.whl
+  Downloading https://storage.googleapis.com/tensorflow/windows/cpu/tensorflow-1
+.0.1-cp35-cp35m-win_amd64.whl (14.7MB)
+    100% |################################| 14.7MB 29kB/s
+Collecting wheel>=0.26 (from tensorflow==1.0.1)
+  Downloading wheel-0.29.0-py2.py3-none-any.whl (66kB)
+    100% |################################| 71kB 35kB/s
+Collecting six>=1.10.0 (from tensorflow==1.0.1)
+  Downloading six-1.10.0-py2.py3-none-any.whl
+Collecting protobuf>=3.1.0 (from tensorflow==1.0.1)
+  Downloading protobuf-3.2.0-py2.py3-none-any.whl (360kB)
+    100% |################################| 368kB 5.9kB/s
+Collecting numpy>=1.11.0 (from tensorflow==1.0.1)
+  Downloading numpy-1.12.1-cp35-none-win_amd64.whl (7.7MB)
+    100% |################################| 7.7MB 35kB/s
+Collecting setuptools (from protobuf>=3.1.0->tensorflow==1.0.1)
+  Downloading setuptools-34.3.2-py2.py3-none-any.whl (389kB)
+    100% |################################| 399kB 46kB/s
+Collecting packaging>=16.8 (from setuptools->protobuf>=3.1.0->tensorflow==1.0.1)
+
+  Downloading packaging-16.8-py2.py3-none-any.whl
+Collecting appdirs>=1.4.0 (from setuptools->protobuf>=3.1.0->tensorflow==1.0.1)
+  Downloading appdirs-1.4.3-py2.py3-none-any.whl
+Collecting pyparsing (from packaging>=16.8->setuptools->protobuf>=3.1.0->tensorf
+low==1.0.1)
+  Downloading pyparsing-2.2.0-py2.py3-none-any.whl (56kB)
+    100% |################################| 61kB 45kB/s
+Installing collected packages: wheel, six, pyparsing, packaging, appdirs, setupt
+ools, protobuf, numpy, tensorflow
+Successfully installed appdirs-1.4.3 numpy-1.11.1 packaging-16.8 protobuf-3.2.0
+pyparsing-2.1.4 setuptools-27.2.0 six-1.10.0 tensorflow-1.0.1 wheel-0.29.0
+You are using pip version 8.1.2, however version 9.0.1 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' comm
+and.
+
+(tensorflow) C:\Users\USER>
+
+
+#########opening new session in anaconda
+
+
+(C:\Program Files\Anaconda3) C:\Users\USER>python
+Python 3.5.2 |Anaconda 4.2.0 (64-bit)| (default, Jul  5 2016, 11:41:13) [MSC v.1
+900 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import tensorflow as tf
+>>> hello = tf.constant('Hello, TensorFlow!')
+>>> sess =tf.Session()
+>>> print(sess.run(hello))
+E c:\tf_jenkins\home\workspace\release-win\device\cpu\os\windows\tensorflow\core
+\framework\op_kernel.cc:943] OpKernel ('op: "BestSplits" device_type: "CPU"') fo
+r unknown op: BestSplits
+E c:\tf_jenkins\home\workspace\release-win\device\cpu\os\windows\tensorflow\core
+\framework\op_kernel.cc:943] OpKernel ('op: "CountExtremelyRandomStats" device_t
+ype: "CPU"') for unknown op: CountExtremelyRandomStats
+E c:\tf_jenkins\home\workspace\release-win\device\cpu\os\windows\tensorflow\core
+\framework\op_kernel.cc:943] OpKernel ('op: "FinishedNodes" device_type: "CPU"')
+ for unknown op: FinishedNodes
+E c:\tf_jenkins\home\workspace\release-win\device\cpu\os\windows\tensorflow\core
+\framework\op_kernel.cc:943] OpKernel ('op: "GrowTree" device_type: "CPU"') for
+unknown op: GrowTree
+E c:\tf_jenkins\home\workspace\release-win\device\cpu\os\windows\tensorflow\core
+\framework\op_kernel.cc:943] OpKernel ('op: "ReinterpretStringToFloat" device_ty
+pe: "CPU"') for unknown op: ReinterpretStringToFloat
+E c:\tf_jenkins\home\workspace\release-win\device\cpu\os\windows\tensorflow\core
+\framework\op_kernel.cc:943] OpKernel ('op: "SampleInputs" device_type: "CPU"')
+for unknown op: SampleInputs
+E c:\tf_jenkins\home\workspace\release-win\device\cpu\os\windows\tensorflow\core
+\framework\op_kernel.cc:943] OpKernel ('op: "ScatterAddNdim" device_type: "CPU"'
+) for unknown op: ScatterAddNdim
+E c:\tf_jenkins\home\workspace\release-win\device\cpu\os\windows\tensorflow\core
+\framework\op_kernel.cc:943] OpKernel ('op: "TopNInsert" device_type: "CPU"') fo
+r unknown op: TopNInsert
+E c:\tf_jenkins\home\workspace\release-win\device\cpu\os\windows\tensorflow\core
+\framework\op_kernel.cc:943] OpKernel ('op: "TopNRemove" device_type: "CPU"') fo
+r unknown op: TopNRemove
+E c:\tf_jenkins\home\workspace\release-win\device\cpu\os\windows\tensorflow\core
+\framework\op_kernel.cc:943] OpKernel ('op: "TreePredictions" device_type: "CPU"
+') for unknown op: TreePredictions
+E c:\tf_jenkins\home\workspace\release-win\device\cpu\os\windows\tensorflow\core
+\framework\op_kernel.cc:943] OpKernel ('op: "UpdateFertileSlots" device_type: "C
+PU"') for unknown op: UpdateFertileSlots
+b'Hello, TensorFlow!'
+>>>
+
